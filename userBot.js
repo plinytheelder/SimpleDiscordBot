@@ -142,7 +142,7 @@ bot.on('message', message => {
 			if(config.patreon.enabled==="yes"){ cmds+="`!subscribe`/`!patreon`   \\\u00BB   for a link to our **Patreon** [to subscribe]\n" }
 			if(config.paypal.enabled==="yes"){ cmds+="`!donate`/`!paypal`   \\\u00BB   for a link to our **PayPal** [to show extra support]\n" }
 			if(config.mapHoods.enabled==="yes"){ cmds+="`!hoods`   \\\u00BB   for a map with **Neighborhoods**\n" }
-			if(config.mapCoverage.enabled==="yes"){ cmds+="`!coverage`/`!zones`   \\\u00BB   for a map of our **coverage/zones**\n.\n" }
+			if(config.mapCoverage.enabled==="yes"){ cmds+="`!coverage`   \\\u00BB   for a map of our **coverage/zones**\n.\n" }
 			cmds+="... for more commands, type:\n"
 				+"`!commands mods`";
 		}
