@@ -319,19 +319,26 @@ bot.on('message', message => {
 					+"`!remove quest all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
+	if(command==="willow") {
+		if(!args[0]) { 
+			cmds="--- ** NOTIFICATIONS ** ---\n"
+					+"`Have you met my collegue Professor Willow?\n"
+					+"`Type `!subscribe` to gain access or `!willow` help for questions setting up";
+				return c.send(cmds).catch(console.error);
+		}
 	}	if(command==="willowhelp") {
 		if(!args[0]) { 
 			cmds="--- ** COMMANDS FOR WILLOW ** ---\n"
 					+"`!poracle`   \\\u00BB   type in #willow-register to register\n"
 					+"`!unregister`   \\\u00BB   type in #willow-register to delete all info\n"
-					+"`--- Once registered, DM Willow ---\n"
+					+"`** Once registered, DM Willow **\n"
 					+"`!stop`   \\\u00BB   temporarily stops alarms\n"
 					+"`!start`   \\\u00BB   resume if previously stopped\n"
 					+"`!location sherman oaks`   \\\u00BB   register you location. can be city, coords, address, etc.\n"
 					+"`!area add sherman_oaks`   \\\u00BB   adds tracking in area. do not use spaces. type !hoods to see availablity"
 					+"`!area remove sherman_oaks`   \\\u00BB   remove tracking in that area\n"
 					+"`!tracked`   \\\u00BB   gives a list of user's current notifications\n"
-					+"`--- For help with other commands ---\n"
+					+"`** For help with other commands **\n"
 					+"`!monhelp`   \\\u00BB   for help with mon notifications\n"
 					+"`!raidhelp`   \\\u00BB   for help with raid notifications\n"
 					+"`!questhelp`   \\\u00BB   for help with raid notifications\n";
