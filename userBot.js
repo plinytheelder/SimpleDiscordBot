@@ -287,7 +287,6 @@ bot.on('message', message => {
 					+"`!untrack pikachu`   \\\u00BB   remove mon tracking\n"
 					+"`!untrack everything`   \\\u00BB   remove all mon tracking";
 				return c.send(cmds).catch(console.error);
-			}
 		}
 	}
 	if(command==="raidhelp") {
@@ -307,7 +306,6 @@ bot.on('message', message => {
 					+"`!untrack pikachu`   \\\u00BB   remove mon tracking\n"
 					+"`!untrack everything`   \\\u00BB   remove all mon tracking";
 				return c.send(cmds).catch(console.error);
-			}
 		}
 	}
 	if(command==="questhelp") {
@@ -322,7 +320,6 @@ bot.on('message', message => {
 					+"`!remove quest stardust`   \\\u00BB   remove select quest tracking\n"
 					+"`!remove quest all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
-			}
 		}
 	}	if(command==="willowhelp") {
 		if(!args[0]) { 
@@ -341,7 +338,6 @@ bot.on('message', message => {
 					+"`!raidhelp`   \\\u00BB   for help with raid notifications\n"
 					+"`!questhelp`   \\\u00BB   for help with raid notifications\n";
 				return c.send(cmds).catch(console.error);
-			}
 		}
 	}
 });
