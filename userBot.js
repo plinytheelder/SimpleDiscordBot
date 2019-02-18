@@ -324,7 +324,7 @@ bot.on('message', message => {
 		if(!args[0]) { 
 			cmds="--- ** NOTIFICATIONS ** ---\n"
 					+"`Have you met my collegue Professor Willow?\n"
-					+"`Type `!subscribe` to gain access or `!willow` help for questions setting up";
+					+"`Type `!subscribe` to gain access or `!willowhelp` for questions setting up";
 				return c.send(cmds).catch(console.error);
 		}
 	}	
