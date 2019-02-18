@@ -258,7 +258,6 @@ bot.on('message', message => {
 				'description': ':phone: Share the link above :phone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
-		}
 	}	
 	if(command==="restart"){
 		if(m.id===config.ownerID){
