@@ -319,6 +319,7 @@ bot.on('message', message => {
 					+"`!remove quest all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
+	}
 	if(command==="willow") {
 		if(!args[0]) { 
 			cmds="--- ** NOTIFICATIONS ** ---\n"
@@ -326,7 +327,8 @@ bot.on('message', message => {
 					+"`Type `!subscribe` to gain access or `!willow` help for questions setting up";
 				return c.send(cmds).catch(console.error);
 		}
-	}	if(command==="willowhelp") {
+	}	
+	if(command==="willowhelp") {
 		if(!args[0]) { 
 			cmds="--- ** COMMANDS FOR WILLOW ** ---\n"
 					+"`!poracle`   \\\u00BB   type in #willow-register to register\n"
