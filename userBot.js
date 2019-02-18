@@ -250,7 +250,6 @@ bot.on('message', message => {
 		}
 	}
 	if(command==="invite") {
-		if(config.inviteUrl.enabled==="yes"){
 			let embedMSG={
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Copy ME and share \u00AB \u00AB',
