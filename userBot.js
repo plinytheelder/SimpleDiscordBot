@@ -209,12 +209,12 @@ bot.on('message', message => {
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapMain.url,
 				'thumbnail': {'url': config.mapMain.url},
-				'description': ':map: Click above to see our webmap :map:\nType !subscribe to gain access'
+				'description': ':map: Click above to see our webmap :map:\nType `!subscribe` to gain access'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
 	}        
-    if(command==="raids" || command==="raidmap" || command==="raid") {
+    	if(command==="raids" || command==="raidmap" || command==="raid") {
 		if(config.mapRaids.enabled==="yes"){
 			return c.send("Our official **raids webmap**: \n"+config.mapRaids.url).catch(console.error);
 		}
@@ -231,7 +231,7 @@ bot.on('message', message => {
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
 	} 
-    if(command==="zones") {
+    	if(command==="zones") {
 		if(config.mapZones.enabled==="yes"){
 			return c.send("Map of the **Zones** and Servers: \n "+config.mapZones.url+" \n"
 				+"...and for Coverage map: `!coverage`").catch(console.error);
@@ -244,7 +244,7 @@ bot.on('message', message => {
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapHoods.url,
 				'thumbnail': {'url': config.mapHoods.url},
-				'description': ':map: Click above to see our **Neighborhoods** :map:'
+				'description': ':map: Click to see our **Neighborhoods** :map:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
@@ -256,7 +256,7 @@ bot.on('message', message => {
 				'title': '\u00BB\u00BB Copy ME and share \u00AB \u00AB',
 				'url': config.inviteUrl.url,
 				'thumbnail': {'url': config.inviteUrl.url},
-				'description': ':phone: Use the link above to **invite** :phone:\nCannot wait to meet your friends!'
+				'description': ':phone: Use the link above :phone:\nCannot wait to meet your friends!'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
