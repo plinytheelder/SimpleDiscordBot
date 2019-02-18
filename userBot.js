@@ -255,7 +255,7 @@ bot.on('message', message => {
 				'title': '\u00BB\u00BB Copy ME and share \u00AB \u00AB',
 				'url': config.inviteUrl,
 				'thumbnail': {'url': config.inviteUrl},
-				'description': ':phone: Share the link above :phone:'
+				'description': ':iphone: Share the link above :iphone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 	}	
