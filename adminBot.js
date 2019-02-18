@@ -154,9 +154,6 @@ bot.on('message', message => {
 // ##########################################################################
 // ############################## SPAM CONTROL ##############################
 // ##########################################################################
-	// AVOID ADVERTISEMENT | OTHER SERVER NAMES
-	const advTxt=["seapokemap","sea-pokemap","pokehuntr","gymhuntr","pokefetch","pokehuntr.com","gymhuntr.com","pokefetch.com",
-				"http://pokehuntr.com","http://gymhuntr.com","http://pokefetch.com","http://www.pokehuntr.com","http://www.gymhuntr.com","http://www.pokefetch.com"];
 	
 	// AVOID SPOOFTALKS
 	const spoofTxt=["spoof","spooof","spooph","spoooph","sp00f","sp000f","spo0f","sp0of","s.p.o.o.f","s.p.o.0.f","s.p.0.o.f","s-p-o-o-f","joystick"];
