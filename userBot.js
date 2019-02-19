@@ -330,7 +330,7 @@ bot.on('message', message => {
 			cmds="--- ** COMMANDS FOR WILLOW ** ---\n"
 					+"`!poracle`   \\\u00BB   type in #willow-register to register\n"
 					+"`!unregister`   \\\u00BB   type in #willow-register to delete all info\n"
-					+"`** Once registered, DM Willow **\n"
+					+"`** Direct Message Willow **\n"
 					+"`!stop`   \\\u00BB   temporarily stops alarms\n"
 					+"`!start`   \\\u00BB   resume if previously stopped\n"
 					+"`!location sherman oaks`   \\\u00BB   register you location. can be city, coords, address, etc.\n"
