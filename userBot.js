@@ -40,6 +40,7 @@ bot.on('message', message => {
 	
 	
 	
+	
 // ############################## AUTO LEVEL ROLES ##############################
 	if(message.channel.id===config.levelRolesChannelID){
 		// LEVEL ROLE NAME PREFIX (INCLUDE SPACE OR ":" OR "-")
@@ -51,7 +52,11 @@ bot.on('message', message => {
 		// VARIABLES
 		let newRole=""; let oldRole="";
 		
-				
+		// ERROR MESSAGE
+		let levelNotFound="\n⚠ Level **NOT** found! Please make sure you type **ONLY** your level, and nothing else, along with your screenshot.\n"
+				+" » Exact levels on file: `"+lvlRoles+"`\n**[WARNING]**: __DO NOT__ abuse this function (assigning your own **Level**-role)... "
+				+"screenshots and levels **are still** being __verified__ by staff and moderators; abusers will **lose** their rights to this function, the channel, and level assignment";
+		
 		// IGNORE PICTURES, MESSAGES FROM BOT, AND COMMAND MESSAGES
 		if(message.content && message.member.id!==config.botID && !message.content.startsWith(config.cmdPrefix)){
 			
@@ -104,8 +109,6 @@ bot.on('message', message => {
 	let args=msg.split(" ").slice(1);
 	
 		
-
-	
 // ######################### COMMANDS #############################
 	if(command==="commands" || command==="help") {
 		if(args[0]==="mods") {
