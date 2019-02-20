@@ -347,7 +347,7 @@ bot.on('message', message => {
 	
 // ############################## STATS ##############################
 	if(command==="stats"){
-		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID){
+		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id)){
 			let onlineM=g.members.filter(m=>m.presence.status==="online").size;
 			let idleM=g.members.filter(m=>m.presence.status==="idle").size;
 			let busyM=g.members.filter(m=>m.presence.status==="dnd").size;
