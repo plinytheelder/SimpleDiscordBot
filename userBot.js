@@ -196,8 +196,8 @@ bot.on('message', message => {
 	if(command==="invite") {
 			let embedMSG={
 				'color': 0xFF0000,
-				'title': '\u00BB\u00BB Invite Link \u00AB \u00AB',
-				'description': ':iphone: Share [me](https://discord.gg/q3vSWc8) with friends :iphone:'
+				'title': '[\u00BB\u00BB Invite Link \u00AB \u00AB](https://discord.gg/q3vSWc8)',
+				'description': ':iphone: Share me with friends :iphone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 	}	
