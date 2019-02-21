@@ -120,7 +120,6 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to Subscribe \u00AB\u00AB',
 				'url': config.patreon.url,
-				'thumbnail': {'url': config.patreon.img},
 				'description': ':beers: Thank you :beers:\nYour support is greatly appreciated'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
@@ -136,7 +135,6 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to Donate \u00AB \u00AB',
 				'url': config.paypal.url,
-				'thumbnail': {'url': config.paypal.img},
 				'description': ':beers: Thank you :beers:\nYour support is greatly appreciated'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
@@ -157,7 +155,6 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapMain.url,
-				'thumbnail': {'url': config.mapMain.url},
 				'description': ':map: Click above to see our webmap :map:\nType `!subscribe` to gain access'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
@@ -174,7 +171,6 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapCoverage.url,
-				'thumbnail': {'url': config.mapCoverage.url},
 				'description': ':map: Click above to see our **Coverage** :map:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
@@ -192,7 +188,6 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapHoods.url,
-				'thumbnail': {'url': config.mapHoods.url},
 				'description': ':map: Click to see our **Neighborhoods** :map:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
@@ -202,8 +197,7 @@ bot.on('message', message => {
 			let embedMSG={
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Invite Link \u00AB \u00AB',
-				'thumbnail': {'url': config.inviteUrl},
-				'description': ':iphone: Share [[me]](config.inviteUrl) with friends :iphone:'
+				'description': ':iphone: Share [me](https://discord.gg/q3vSWc8) with friends :iphone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 	}	
