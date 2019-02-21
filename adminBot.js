@@ -154,7 +154,9 @@ bot.on('message', message => {
 // ##########################################################################
 // ############################## SPAM CONTROL ##############################
 // ##########################################################################
-	
+	// AVOID ADVERTISEMENT | OTHER SERVER NAMES
+	const advTxt=[".pick"];
+		
 	// AVOID SPOOFTALKS
 	const spoofTxt=["spoof","spooof","spooph","spoooph","sp00f","sp000f","spo0f","sp0of","s.p.o.o.f","s.p.o.0.f","s.p.0.o.f","s-p-o-o-f","joystick"];
 	
@@ -192,20 +194,11 @@ bot.on('message', message => {
 	if(advTxt.some(word => msg.includes(word))){
 		
 		// STOP SCRIPT IF USER IS ADMIN|OWNER|MOD|STAFF
-		if(m.id===config.botID || m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID){skip="yes"}
+		if(m.roles.has(ModR.id)){skip="yes"}
 		
 		if(skip==="no"){
 			message.delete();
-			embedMSG={
-				'color': 0xFF0000,
-				'title': '⚠ WARNING: No Advertising ⚠',
-				'thumbnail': {'url': config.warningImg},
-				'description': 'You are being **WARNED** about a word/link... '
-					+'Advertising is **NOT** allowed in our server.\n**OffenseDate**: '+timeStamp
-			};
-			console.log(timeStampSys+"[ADMIN] [ADV-TEXT] \""+m.user.username+"\" ("+m.id+") said: "+message.content);
-			m.send({embed: embedMSG}).catch(console.error);
-			return m.send("Please **Read/Review Our Rules** at: <#"+config.rulesChannelID+"> ... in order to avoid Mute/Kick/Ban");
+	
 		}
 	}
 	
