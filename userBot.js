@@ -39,7 +39,24 @@ bot.on('message', message => {
 	}
 	
 	
+	// MAKE SURE ITS A COMMAND
+	if(!message.content.startsWith(config.cmdPrefix)) { return }
 	
+	// COMMON VARIABLES
+	let g=message.guild; let c=message.channel; let m=message.member; let msg=message.content; let cmds="";
+	let mentioned=""; if(message.mentions.users.first()){mentioned=message.mentions.users.first();}
+	
+	// GET ROLES FROM CONFIG
+	let AdminR=g.roles.find("name", config.adminRoleName);
+	let ModR=g.roles.find("name", config.modRoleName);
+	
+	// REMOVE LETTER CASE (MAKE ALL LOWERCASE)
+	let command=msg.toLowerCase(); command=command.split(" ")[0]; command=command.slice(config.cmdPrefix.length);
+	
+	// GET ARGUMENTS
+	let args=msg.split(" ").slice(1);
+	
+		
 		
 // ######################### COMMANDS #############################
 	if(command==="commands" || command==="help") {
