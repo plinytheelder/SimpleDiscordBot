@@ -201,10 +201,9 @@ bot.on('message', message => {
 	if(command==="invite") {
 			let embedMSG={
 				'color': 0xFF0000,
-				'title': '\u00BB\u00BB Copy ME and share \u00AB \u00AB',
-				'url': config.inviteUrl,
+				'title': '\u00BB\u00BB Invite Link \u00AB \u00AB',
 				'thumbnail': {'url': config.inviteUrl},
-				'description': ':iphone: Share me with friends :iphone:'
+				'description': ':iphone: Share [[me]](config.inviteUrl) with friends :iphone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 	}	
