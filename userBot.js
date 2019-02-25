@@ -246,11 +246,6 @@ bot.on('message', message => {
 					+"`!raid level5 ex`   \\\u00BB   tracks Level 5, EX-Eligible raids\n"
 					+"`!raid level1 mystic`   \\\u00BB   track Level 1 raids at Mystic gyms CP300+\n"
 					+"`!egg level5...`   \\\u00BB   use `egg` in place of `raid` in commands above"
-					+"`!track shuckle level20`   \\\u00BB   tracks mon Level 20+\n"
-					+"`!track shuckle maxlevel20`   \\\u00BB   tracks mon <Level 20\n"
-					+"`!track snorlax atk13`   \\\u00BB   tracks mon 13atk+\n"
-					+"`!track snorlax def13`   \\\u00BB   tracks mon 13def+\n"
-					+"`!track snorlax sta13`   \\\u00BB   tracks mon 13sta+\n"
 					+"`!unraid shinx` or `!unegg level1`   \\\u00BB   remove tracking\n"
 					+"`!unraid everything` or `!unegg everything`   \\\u00BB   removes all tracking";
 				return c.send(cmds).catch(console.error);
