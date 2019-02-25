@@ -251,8 +251,8 @@ bot.on('message', message => {
 					+"`!track snorlax atk13`   \\\u00BB   tracks mon 13atk+\n"
 					+"`!track snorlax def13`   \\\u00BB   tracks mon 13def+\n"
 					+"`!track snorlax sta13`   \\\u00BB   tracks mon 13sta+\n"
-					+"`!untrack pikachu`   \\\u00BB   remove mon tracking\n"
-					+"`!untrack everything`   \\\u00BB   remove all mon tracking";
+					+"`!unraid shinx` or `unegg level1`   \\\u00BB   remove tracking\n"
+					+"`!unraid everything` or `unegg everything`   \\\u00BB   removes all tracking";
 				return c.send(cmds).catch(console.error);
 		}
 	}
