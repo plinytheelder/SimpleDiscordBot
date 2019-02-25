@@ -200,6 +200,14 @@ bot.on('message', message => {
 				'description': ':iphone: [Share me with friends](https://discord.gg/q3vSWc8) :iphone:'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
+	}
+	if(command==="slack") {
+			let embedMSG={
+				'color': 0xFF0000,
+				'title': '\u00BB\u00BB Slack Info \u00AB\u00AB',
+				'description': ':iphone: [Share me with friends](https://valleypogo.com/slack/) :iphone:'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
 	}	
 	if(command==="restart"){
 		if(m.id===config.ownerID){
