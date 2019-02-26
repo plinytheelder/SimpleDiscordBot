@@ -259,7 +259,7 @@ bot.on('message', message => {
 					+"`!quest all pokemon`   \\\u00BB   tracks all pokemon quests\n"
 					+"`!quest all item`   \\\u00BB   tracks all item quests\n"
 					+"`!quest stardust`   \\\u00BB   tracks stardust quests\n"
-					+"`!quest silver pinap`   \\\u00BB   tracks select item quests"
+					+"`!quest silver pinap`   \\\u00BB   tracks select item quests\n"
 					+"`!remove quest stardust`   \\\u00BB   remove select quest tracking\n"
 					+"`!remove quest all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
