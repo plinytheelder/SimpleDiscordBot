@@ -281,7 +281,7 @@ bot.on('message', message => {
 					+"** \u00BB\u00BB Direct Message Willow **\n"
 					+"`!stop`   \\\u00BB   temporarily stops alarms\n"
 					+"`!start`   \\\u00BB   resume if previously stopped\n"
-					+"`!location sherman oaks`   \\\u00BB   register you location. can be city, coords, address, etc.\n"
+					+"`!location sherman oaks`   \\\u00BB   register your location. can be city, coords, address, etc.\n"
 					+"`!area add sherman_oaks`   \\\u00BB   adds tracking in area. do not use spaces. type !hoods to see availablity\n"
 					+"`!area remove sherman_oaks`   \\\u00BB   remove tracking in that area\n"
 					+"`!tracked`   \\\u00BB   gives a list of user's current notifications\n"
