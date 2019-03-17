@@ -223,8 +223,8 @@ bot.on('message', message => {
 			cmds="--- ** COMMANDS FOR MON ** ---\n"
 					+"`!track pikachu`   \\\u00BB   mon tracking within an area you've registered\n"
 					+"`!track pikachu d750`   \\\u00BB   tracks mon within 750m of the location registered\n"
-					+"`!!track pikachu iv90`   \\\u00BB   tracks 90%+ mon\n"
-					+"`!track pikachu maxiv0`   \\\u00BB   tracks 0% mon\n"
+					+"`!track pikachu iv90`   \\\u00BB   tracks 90%+ mon\n"
+					+"`!track pikachu maxiv0 iv0`   \\\u00BB   tracks 0% mon\n"
 					+"`!track shuckle cp300`   \\\u00BB   track mon CP300+\n"
 					+"`!track shuckle maxcp300`   \\\u00BB   tracks mon <CP300\n"
 					+"`!track shuckle level20`   \\\u00BB   tracks mon Level 20+\n"
@@ -232,6 +232,7 @@ bot.on('message', message => {
 					+"`!track snorlax atk13`   \\\u00BB   tracks mon 13atk+\n"
 					+"`!track snorlax def13`   \\\u00BB   tracks mon 13def+\n"
 					+"`!track snorlax sta13`   \\\u00BB   tracks mon 13sta+\n"
+					+"`!track swablu maxatk0 atk15 sta15`   \\\u00BB   Max can also be used in style above\n"
 					+"`!untrack pikachu`   \\\u00BB   remove mon tracking\n"
 					+"`!untrack everything`   \\\u00BB   remove all mon tracking";
 				return c.send(cmds).catch(console.error);
@@ -242,6 +243,7 @@ bot.on('message', message => {
 			cmds="--- ** COMMANDS FOR RAIDS ** ---\n"
 					+"`!raid shinx`   \\\u00BB   raid tracking within an area you've registered\n"
 					+"`!raid shinx d750`   \\\u00BB   tracks raid within 750m of the location registered\n"
+					+"`!raid marowak formaloa`   \\\u00BB   tracks the Alolan form\n"
 					+"`!raid level5`   \\\u00BB   tracks Level 5 raids\n"
 					+"`!raid level5 ex`   \\\u00BB   tracks Level 5, EX-Eligible raids\n"
 					+"`!raid level1 mystic`   \\\u00BB   track Level 1 raids at Mystic gyms\n"
@@ -260,8 +262,8 @@ bot.on('message', message => {
 					+"`!quest all item`   \\\u00BB   tracks all item quests\n"
 					+"`!quest stardust`   \\\u00BB   tracks stardust quests\n"
 					+"`!quest silver pinap`   \\\u00BB   tracks select item quests\n"
-					+"`!remove quest stardust`   \\\u00BB   remove select quest tracking\n"
-					+"`!remove quest all`   \\\u00BB   removes all quest tracking\n";
+					+"`!quest remove stardust`   \\\u00BB   remove select quest tracking\n"
+					+"`!quest remove all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
 	}
