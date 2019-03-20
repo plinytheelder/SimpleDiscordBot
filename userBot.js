@@ -266,14 +266,6 @@ bot.on('message', message => {
 					+"`!quest remove all`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
-	}
-	if(command==="willow") {
-		if(!args[0]) { 
-			cmds="--- ** NOTIFICATIONS ** ---\n"
-					+"`Have you met my collegue Professor Willow?\n"
-					+"`Type `!subscribe` to gain access or `!willowhelp` for questions setting up";
-				return c.send(cmds).catch(console.error);
-		}
 	}	
 	if(command==="willowhelp") {
 		if(!args[0]) { 
