@@ -248,8 +248,8 @@ bot.on('message', message => {
 					+"`!raid level5 ex`   \\\u00BB   tracks Level 5, EX-Eligible raids\n"
 					+"`!raid level1 mystic`   \\\u00BB   track Level 1 raids at Mystic gyms\n"
 					+"`!egg level5...`   \\\u00BB   use `egg` in place of `raid` in commands above\n"
-					+"`!unraid shinx` or `!unegg level1`   \\\u00BB   remove tracking\n"
-					+"`!unraid everything` or `!unegg everything`   \\\u00BB   removes all tracking";
+					+"`!raid remove shinx` or `!egg remove level1`   \\\u00BB   remove tracking\n"
+					+"`!raid remove everything` or `!egg remove everything`   \\\u00BB   removes all tracking";
 				return c.send(cmds).catch(console.error);
 		}
 	}
@@ -270,7 +270,7 @@ bot.on('message', message => {
 	if(command==="willowhelp") {
 		if(!args[0]) { 
 			cmds="--- ** COMMANDS FOR WILLOW ** ---\n"
-					+"`!poracle`   \\\u00BB   type in #willow-register to register\n"
+					+"`!willow`   \\\u00BB   type in #willow-register to register\n"
 					+"`!unregister`   \\\u00BB   type in #willow-register to delete all info\n"
 					+"** \u00BB\u00BB Direct Message Willow **\n"
 					+"`!stop`   \\\u00BB   temporarily stops alarms\n"
@@ -278,7 +278,7 @@ bot.on('message', message => {
 					+"`!location sherman oaks`   \\\u00BB   register your location. can be city, coords, address, etc.\n"
 					+"`!area add sherman_oaks`   \\\u00BB   adds tracking in area. do not use spaces. type !hoods to see availablity\n"
 					+"`!area remove sherman_oaks`   \\\u00BB   remove tracking in that area\n"
-					+"`!tracked`   \\\u00BB   gives a list of user's current notifications\n"
+					+"`!list`   \\\u00BB   gives a list of user's current notifications\n"
 					+"** \u00BB\u00BB For help with other commands **\n"
 					+"`!monhelp`   \\\u00BB   for help with mon notifications\n"
 					+"`!raidhelp`   \\\u00BB   for help with raid notifications\n"
