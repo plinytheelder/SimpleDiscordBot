@@ -132,7 +132,7 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to Link Your Account \u00AB\u00AB',
 				'url': config.patreonrewards.url,
-				'description': ':beers: Thank you for your support :beers:\nBe sure to link your account so you can get started!'
+				'description': ':beers: Thank you for your support via Patreon :beers:\nBe sure to link your account so you can get started!'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
