@@ -91,9 +91,9 @@ bot.on('message', message => {
 			if(config.patreon.enabled==="yes"){ cmds+="`!subscribe`/`!patreon`   \\\u00BB   for a link to our **Patreon** [to subscribe]\n" }
 			if(config.paypal.enabled==="yes"){ cmds+="`!donate`/`!paypal`   \\\u00BB   for a link to our **PayPal** [to show extra support]\n" }
 			if(config.mapHoods.enabled==="yes"){ cmds+="`!hoods`   \\\u00BB   for a map with **Neighborhoods**\n" }
-			if(config.mapCoverage.enabled==="yes"){ cmds+="`!coverage`   \\\u00BB   for a map of our **coverage/zones**\n.\n" }
-			cmds+="... for more commands, type:\n"
-				+"`!commands mods`";
+			if(config.mapCoverage.enabled==="yes"){ cmds+="`!coverage`   \\\u00BB   for a map of our **coverage/zones**\n" }
+			if(config.mapCoverage.enabled==="yes"){ cmds+="`!willowhelp`   \\\u00BB   for help setting up Willow notifications\n" }
+			if(config.mapCoverage.enabled==="yes"){ cmds+="`!pvphelp`   \\\u00BB   for help setting up PvP notifications\n" };
 		}
 		return c.send(cmds).catch(console.error);
 	}
@@ -126,7 +126,17 @@ bot.on('message', message => {
 		}
 	}
 	
-	
+	if(command==="patreonrewards" || command==="rewards") {
+		if(config.patreon.enabled==="yes"){
+			let embedMSG={
+				'color': 0xFF0000,
+				'title': '\u00BB\u00BB Click HERE to Link Your Account \u00AB\u00AB',
+				'url': config.patreonrewards.url,
+				'description': ':beers: Thank you for your support :beers:\nBe sure to link your account so you can get started!'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
+		}
+	}	
 	
 // ######################### DONATE #############################
 	if(command==="paypal" || command==="donate") {
@@ -263,9 +273,27 @@ bot.on('message', message => {
 					+"`!quest stardust`   \\\u00BB   tracks stardust quests\n"
 					+"`!quest silver pinap`   \\\u00BB   tracks select item quests\n"
 					+"`!quest remove stardust`   \\\u00BB   remove select quest tracking\n"
-					+"`!quest remove all`   \\\u00BB   removes all quest tracking\n";
+					+"`!quest remove everything`   \\\u00BB   removes all quest tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
+	}
+	if(command==="rockethelp") {
+		if(!args[0]) { 
+			cmds="--- ** COMMANDS FOR ROCKET ** ---\n"
+					+"`!rocket psychic`   \\\u00BB   tracking psychic invasions within an area you've registered\n"
+					+"`!rocket everything d750`   \\\u00BB   tracks all invasions within 750m of the location registered\n"
+					+"`!rocket mixed female`   \\\u00BB   tracks female invasions with mixed typing\n"
+					+"`!quest remove everything`   \\\u00BB   removes all quest tracking\n";
+				return c.send(cmds).catch(console.error);
+		}
+	}
+	if(command==="pvphelp") {
+			let embedMSG={
+				'color': 0xFF0000,
+				'title': '\u00BB\u00BB PvP Notifications \u00AB\u00AB',
+				'description': '<:type_fighting:553663995345764352> Want to setup notifications for PvP optimal mon? <:type_fighting:553663995345764352>\nJust type `@pvp` in <#542779336374091826> to get started!'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
 	}	
 	if(command==="willowhelp") {
 		if(!args[0]) { 
@@ -282,7 +310,8 @@ bot.on('message', message => {
 					+"** \u00BB\u00BB For help with other commands **\n"
 					+"`!monhelp`   \\\u00BB   for help with mon notifications\n"
 					+"`!raidhelp`   \\\u00BB   for help with raid notifications\n"
-					+"`!questhelp`   \\\u00BB   for help with raid notifications\n";
+					+"`!questhelp`   \\\u00BB   for help with raid notifications\n"
+					+"`!rockethelp`   \\\u00BB   for help with raid notifications\n";
 				return c.send(cmds).catch(console.error);
 		}
 	}
