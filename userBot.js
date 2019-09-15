@@ -283,7 +283,7 @@ bot.on('message', message => {
 					+"`!rocket psychic`   \\\u00BB   tracking psychic invasions within an area you've registered\n"
 					+"`!rocket everything d750`   \\\u00BB   tracks all invasions within 750m of the location registered\n"
 					+"`!rocket mixed female`   \\\u00BB   tracks female invasions with mixed typing\n"
-					+"`!quest remove everything`   \\\u00BB   removes all quest tracking\n";
+					+"`!rocket remove everything`   \\\u00BB   removes all rocket tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
 	}
