@@ -288,12 +288,17 @@ bot.on('message', message => {
 		}
 	}
 	if(command==="pvphelp") {
-			let embedMSG={
-				'color': 0xFF0000,
-				'title': '\u00BB\u00BB PvP Notifications \u00AB\u00AB',
-				'description': '<:type_fighting:553663995345764352> Want to setup notifications for PvP optimal mon? <:type_fighting:553663995345764352>\nJust type `@pvp` in <#542779336374091826> to get started!'
-			};
-			return c.send({embed: embedMSG}).catch(console.error);
+		if(!args[0]) { 
+			cmds="--- ** COMMANDS FOR PVP ** ---\n"
+					+"<:type_fighting:553663995345764352> Do you even PvP, bro? <:type_fighting:553663995345764352>\n"
+					+"To start, type `@pvp` in <#542779336374091826> to initialize the PvP module\n"
+					+"Ranking finds mon that have the highest level and maximizes CP for each league\n"
+					+"Choose a low ranking to prevent getting spammed, at least under 20\n"
+					+"Percentage isn't relevant. Just add all\n"
+					+"For areas, be sure and add neighborhoods near you!\n"
+					+"<:type_fighting:553663995345764352> With that, you're good to go! <:type_fighting:553663995345764352>\n";
+				return c.send(cmds).catch(console.error);
+		}
 	}	
 	if(command==="willowhelp") {
 		if(!args[0]) { 
