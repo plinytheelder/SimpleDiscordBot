@@ -170,11 +170,17 @@ bot.on('message', message => {
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
 	}        
-    	if(command==="raids" || command==="raidmap" || command==="raid") {
+	if(command==="raids") {
 		if(config.mapRaids.enabled==="yes"){
-			return c.send("Our official **raids webmap**: \n"+config.mapRaids.url).catch(console.error);
+			let embedMSG={
+				'color': 0xFF0000,
+				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
+				'url': config.mapRaids.url,
+				'description': ':type_fighting: Click above to see our active raids :type_fighting:\nType `!subscribe` to gain access'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
 		}
-	}
+	} 
 	if(command==="coverage") {
 		if(config.mapCoverage.enabled==="yes"){
 			let embedMSG={
