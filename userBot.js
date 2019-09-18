@@ -176,7 +176,7 @@ bot.on('message', message => {
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapRaids.url,
-				'description': ':type_fighting: Click above to see our active raids :type_fighting:\nType `!subscribe` to gain access'
+				'description': '<:type_fighting:553663995345764352> Click above to see our active raids <:type_fighting:553663995345764352>\nType `!subscribe` to gain access'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
