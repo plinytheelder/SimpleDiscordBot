@@ -245,10 +245,12 @@ bot.on('message', message => {
 					+"`!track shuckle maxcp300`   \\\u00BB   tracks mon <CP300\n"
 					+"`!track shuckle level20`   \\\u00BB   tracks mon Level 20+\n"
 					+"`!track shuckle maxlevel20`   \\\u00BB   tracks mon <Level 20\n"
+					+"`!track combee female`   \\\u00BB   track gender specific mon\n"
+					+"`!track sandshrew formalola`   \\\u00BB   track specific forms\n"
 					+"`!track snorlax atk13`   \\\u00BB   tracks mon 13atk+\n"
 					+"`!track snorlax def13`   \\\u00BB   tracks mon 13def+\n"
 					+"`!track snorlax sta13`   \\\u00BB   tracks mon 13sta+\n"
-					+"`!track swablu maxatk0 atk15 sta15`   \\\u00BB   Max can also be used in style above\n"
+					+"`!track swablu maxatk0 atk14 sta15`   \\\u00BB   Max can also be used in style above\n"
 					+"`!untrack pikachu`   \\\u00BB   remove mon tracking\n"
 					+"`!untrack everything`   \\\u00BB   remove all mon tracking";
 				return c.send(cmds).catch(console.error);
