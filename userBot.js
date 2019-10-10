@@ -49,6 +49,7 @@ bot.on('message', message => {
 	// GET ROLES FROM CONFIG
 	let AdminR=g.roles.find("name", config.adminRoleName);
 	let ModR=g.roles.find("name", config.modRoleName);
+	let DonorR=g.roles.find("name", config.donorRoleName);
 	
 	// REMOVE LETTER CASE (MAKE ALL LOWERCASE)
 	let command=msg.toLowerCase(); command=command.split(" ")[0]; command=command.slice(config.cmdPrefix.length);
@@ -79,7 +80,7 @@ bot.on('message', message => {
 
 // ############################## CENSORSHIP | FRIENDLY CHAT ##############################
 	if(censorTxt.some(word => msg.includes(word))){
-		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID || m.roles.has(Donor.id) ){
+		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID || m.roles.has(DonorR.id) ){
 			embedMSG={
 				'color': 0x00FF00,
 				'title': ':warning: Warning :warning:',
