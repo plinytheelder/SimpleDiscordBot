@@ -79,13 +79,14 @@ bot.on('message', message => {
 
 // ############################## CENSORSHIP | FRIENDLY CHAT ##############################
 	if(censorTxt.some(word => msg.includes(word))){
-		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID){
+		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID || m.roles.has(Donor.id) ){
 			embedMSG={
 				'color': 0x00FF00,
 				'title': ':warning: Warning :warning:',
 				'description': ''
 					+'Ooops. This is a <@537487172421419008> command.\n'
-					+'Please direct message <@537487172421419008> to setup your notifications.'
+					+'Please direct message <@537487172421419008> to setup your notifications.\n\n'
+					+'For questions about <@537487172421419008>, please read <#545727131443920897> or ask in <#545830158901444608>'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
