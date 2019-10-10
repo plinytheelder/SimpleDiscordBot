@@ -56,8 +56,52 @@ bot.on('message', message => {
 	// GET ARGUMENTS
 	let args=msg.split(" ").slice(1);
 	
+// ##########################################################################
+// ############################## SPAM CONTROL ##############################
+// ##########################################################################
+	// AVOID ADVERTISEMENT | OTHER SERVER NAMES
+	const advTxt=[".pick"];
 		
+	// FRIENDLY CHAT
+	const censorTxt=["!track","!willow","@pvp"];		
+
+// ############################## ADVERTISEMENT CHECKER ##############################
+	if(advTxt.some(word => msg.includes(word))){
 		
+		// STOP SCRIPT IF USER IS ADMIN|OWNER|MOD|STAFF
+		if(m.roles.has(ModR.id)){skip="yes"}
+		
+		if(skip==="no"){
+			message.delete();
+	
+		}
+	}
+
+// ############################## CENSORSHIP | FRIENDLY CHAT ##############################
+	if(censorTxt.some(word => msg.includes(word))){
+		if(m.roles.has(ModR.id) || m.roles.has(AdminR.id) || m.id===config.ownerID){
+			embedMSG={
+				'color': 0x00FF00,
+				'title': ':warning: Warning :warning:',
+				'description': ''
+					+'Ooops. This is a <@537487172421419008> command.\n'
+					+'Please direct message <@537487172421419008> to setup your notifications.'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
+		}
+		else {
+			message.delete();
+			embedMSG={
+				'color': 0x00FF00,
+				'title': ':warning: Warning :warning:',
+				'description': ''
+					+'Sorry, "'+m.user.username+'". That command is exclusive for donors.\n'
+					+'Please visit <#545724053256929280> to take advantage of our services!'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
+		}
+	}
+	
 // ######################### COMMANDS #############################
 	if(command==="commands" || command==="help") {
 		if(args[0]==="mods") {
