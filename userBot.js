@@ -64,7 +64,7 @@ bot.on('message', message => {
 	const advTxt=[".pick"];
 		
 	// FRIENDLY CHAT
-	const censorTxt=["!track"];		
+	const censorTxt=["!track","!list","!raid","!area"];		
 
 // ############################## ADVERTISEMENT CHECKER ##############################
 	if(advTxt.some(word => msg.includes(word))){
