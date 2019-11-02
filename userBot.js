@@ -207,7 +207,7 @@ bot.on('message', message => {
 	
 // ######################### OTHER LINKS #############################
 	if(command==="map") {
-		if(config.mapMain.enabled==="yes") & (m.roles.has(MapR.id)) {
+		if(m.roles.has(MapR.id)) {
 			let embedMSG={
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
