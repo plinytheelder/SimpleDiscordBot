@@ -50,6 +50,7 @@ bot.on('message', message => {
 	let AdminR=g.roles.find("name", config.adminRoleName);
 	let ModR=g.roles.find("name", config.modRoleName);
 	let DonorR=g.roles.find("name", config.donorRoleName);
+	let MapR=g.roles.find("name", config.mapRoleName);
 	
 	// REMOVE LETTER CASE (MAKE ALL LOWERCASE)
 	let command=msg.toLowerCase(); command=command.split(" ")[0]; command=command.slice(config.cmdPrefix.length);
