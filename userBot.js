@@ -207,16 +207,25 @@ bot.on('message', message => {
 	
 // ######################### OTHER LINKS #############################
 	if(command==="map") {
-		if(config.mapMain.enabled==="yes"){
+		if(config.mapMain.enabled==="yes") & (m.roles.has(MapR.id)) {
 			let embedMSG={
 				'color': 0xFF0000,
 				'title': '\u00BB\u00BB Click HERE to See \u00AB \u00AB',
 				'url': config.mapMain.url,
-				'description': ':map: Click above to see our webmap :map:\nType `!subscribe` to gain access'
+				'description': ':map: Click above to see our webmap :map:\nJust be sure to login with Discord'
+			};
+			return c.send({embed: embedMSG}).catch(console.error);
+		}else {
+			embedMSG={
+				'color': 0x00FF00,
+				'title': ':warning: Warning :warning:',
+				'description': ''
+					+'Sorry, "'+m.user.username+'". That command is exclusive for donors.\n'
+					+'Please visit <#545724053256929280> to subscribe to our maps!'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
 		}
-	}        
+	}
 	if(command==="raids") {
 		if(config.mapRaids.enabled==="yes"){
 			let embedMSG={
