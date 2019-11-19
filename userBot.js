@@ -334,7 +334,7 @@ bot.on('message', message => {
 					+"`!quest spinda d750`   \\\u00BB   tracks quests within 750m of the location registered\n"
 					+"`!quest all pokemon`   \\\u00BB   tracks all pokemon quests\n"
 					+"`!quest all item`   \\\u00BB   tracks all item quests\n"
-					+"`!quest stardust`   \\\u00BB   tracks stardust quests\n"
+					+"`!quest stardust1000`   \\\u00BB   tracks stardust quests that award at least 1000 dust\n"
 					+"`!quest silver pinap`   \\\u00BB   tracks select item quests\n"
 					+"`!quest remove stardust`   \\\u00BB   remove select quest tracking\n"
 					+"`!quest remove everything`   \\\u00BB   removes all quest tracking\n";
@@ -347,6 +347,7 @@ bot.on('message', message => {
 					+"`!rocket psychic`   \\\u00BB   tracking psychic invasions within an area you've registered\n"
 					+"`!rocket everything d750`   \\\u00BB   tracks all invasions within 750m of the location registered\n"
 					+"`!rocket mixed female`   \\\u00BB   tracks female invasions with mixed typing\n"
+					+"`!rocket boss`   \\\u00BB   tracks all Team GO Rocket Bosses\n"
 					+"`!rocket remove everything`   \\\u00BB   removes all rocket tracking\n";
 				return c.send(cmds).catch(console.error);
 		}
@@ -355,7 +356,7 @@ bot.on('message', message => {
 		if(!args[0]) { 
 			cmds="--- ** COMMANDS FOR PVP ** ---\n"
 					+"<:type_fighting:553663995345764352> Do you even PvP, bro? <:type_fighting:553663995345764352>\n"
-					+"To start, type `@pvp` in <#542779336374091826> to initialize the PvP module\n"
+					+"To start, type `.pvp` in <#542779336374091826> to initialize the PvP module\n"
 					+"Ranking finds mon that have the highest _potential_ level and maximizes CP for each league\n"
 					+"Choose a low ranking to prevent getting spammed, at least under 20\n"
 					+"Percentage isn't relevant. Just add all\n"
