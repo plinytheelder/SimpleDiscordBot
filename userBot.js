@@ -356,7 +356,7 @@ bot.on('message', message => {
 		if(!args[0]) { 
 			cmds="--- ** COMMANDS FOR PVP ** ---\n"
 					+"<:type_fighting:553663995345764352> Do you even PvP, bro? <:type_fighting:553663995345764352>\n"
-					+"To start, type `.pvp` in <#542779336374091826> to initialize the PvP module\n"
+					+"To start, type `.pvp` in <#653735418805616660> to initialize the PvP module\n"
 					+"Ranking finds mon that have the highest _potential_ level and maximizes CP for each league\n"
 					+"Choose a low ranking to prevent getting spammed, at least under 20\n"
 					+"Percentage isn't relevant. Just add all\n"
