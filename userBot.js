@@ -220,7 +220,7 @@ bot.on('message', message => {
 				'color': 0x00FF00,
 				'title': ':warning: Warning :warning:',
 				'description': ''
-					+'Sorry, "'+m.user.username+'". That command is exclusive for donors.\n'
+					+'Sorry, "'+m.user.username+'". That command is exclusive for Patreon tiers PaleAle and up.\n'
 					+'Please visit <#545724053256929280> to subscribe to our maps!'
 			};
 			return c.send({embed: embedMSG}).catch(console.error);
